@@ -105,7 +105,6 @@ if __name__ == '__main__':
     for x in range(0, len(thread)):
         thread[x].join()
 
-
     #MENU OPTIONS
     hide = False
     while(True):
@@ -128,4 +127,3 @@ if __name__ == '__main__':
             case 'q':
                 print('Quiting...')
                 sys.exit(0)
-
