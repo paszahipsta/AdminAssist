@@ -1,2 +1,17 @@
 /env
 /__pycache__
+AdminAssist.7z
+AdminRookie.spec
+build/AdminRookie/AdminRookie.exe.manifest
+build/AdminRookie/AdminRookie.pkg
+build/AdminRookie/Analysis-00.toc
+build/AdminRookie/base_library.zip
+build/AdminRookie/EXE-00.toc
+build/AdminRookie/PKG-00.toc
+build/AdminRookie/PYZ-00.pyz
+build/AdminRookie/PYZ-00.toc
+build/AdminRookie/Tree-00.toc
+build/AdminRookie/Tree-01.toc
+build/AdminRookie/Tree-02.toc
+build/AdminRookie/warn-AdminRookie.txt
+build/AdminRookie/xref-AdminRookie.html
