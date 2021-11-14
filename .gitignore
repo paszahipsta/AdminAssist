@@ -1,7 +1,7 @@
-/env
-/__pycache__
 AdminAssist.7z
 AdminRookie.spec
+__pycache__/AdminRookie.cpython-310.pyc
+__pycache__/commands.cpython-310.pyc
 build/AdminRookie/AdminRookie.exe.manifest
 build/AdminRookie/AdminRookie.pkg
 build/AdminRookie/Analysis-00.toc
