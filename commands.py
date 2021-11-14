@@ -12,7 +12,7 @@ def battery_wmi(key, dict, computer = '.', password = '', user = ''):
         for property in obj.win32_Battery():
             dict[key] += '\tName : ' + property.Name + '\n'
             dict[key] += '\tStatus : ' + property.Status + '\n'
-        pythoncom.CoUninitialize()
+            dict[key] += '\n'
     except wmi.x_access_denied:
         dict[key] = 'Access Denied'
     except wmi.x_wmi_authentication:
@@ -20,6 +20,7 @@ def battery_wmi(key, dict, computer = '.', password = '', user = ''):
     except Exception:
         dict[key] = 'Unknown error: ' + str(Exception.args)
     finally:
+        pythoncom.CoUninitialize()
         return 0
 
 def cpu_wmi(key, dict, computer = '.', password = '', user = ''):
@@ -30,7 +31,7 @@ def cpu_wmi(key, dict, computer = '.', password = '', user = ''):
         for property in obj.win32_Processor():
             dict[key] += '\tName : ' + property.Name + '\n'
             dict[key] += '\tStatus : ' + property.Status + '\n'
-        pythoncom.CoUninitialize()
+            dict[key] += '\n'
     except wmi.x_access_denied:
         dict[key] = 'Access Denied'
     except wmi.x_wmi_authentication:
@@ -38,6 +39,7 @@ def cpu_wmi(key, dict, computer = '.', password = '', user = ''):
     except Exception:
         dict[key] = 'Unknown error: ' + str(Exception.args)
     finally:
+        pythoncom.CoUninitialize()
         return 0
 
 def gpu_wmi(key, dict, computer = '.', password='', user=''):
@@ -48,7 +50,7 @@ def gpu_wmi(key, dict, computer = '.', password='', user=''):
         for property in obj.win32_VideoController():
             dict[key] += '\tName : ' + property.Name + '\n'
             dict[key] += '\tStatus : ' + property.Status + '\n'
-        pythoncom.CoUninitialize()
+            dict[key] += '\n'
     except wmi.x_access_denied:
         dict[key] = 'Access Denied'
     except wmi.x_wmi_authentication:
@@ -56,6 +58,7 @@ def gpu_wmi(key, dict, computer = '.', password='', user=''):
     except Exception:
         dict[key] = 'Unknown error: ' + str(Exception.args)
     finally:
+        pythoncom.CoUninitialize()
         return 0
     
 
@@ -67,7 +70,7 @@ def disk_wmi(key, dict, computer = '.', password='', user=''):
         for property in obj.win32_DiskDrive():
             dict[key] += '\tName : ' + property.Model + '\n'
             dict[key] += '\tStatus : ' + property.Status + '\n'
-        pythoncom.CoUninitialize()
+            dict[key] += '\n'
     except wmi.x_access_denied:
         dict[key] = 'Access Denied'
     except wmi.x_wmi_authentication:
@@ -75,6 +78,7 @@ def disk_wmi(key, dict, computer = '.', password='', user=''):
     except Exception:
         dict[key] = 'Unknown error: ' + str(Exception)
     finally:
+        pythoncom.CoUninitialize()
         return 0
 
 def monitor_wmi(key, dict, computer = '.', password='', user = ''):
@@ -85,7 +89,7 @@ def monitor_wmi(key, dict, computer = '.', password='', user = ''):
         for property in obj.win32_DesktopMonitor():
             dict[key] += '\tName : ' + str(property.PNPDeviceID) + '\n'
             dict[key] += '\tStatus : ' + property.Status + '\n'
-        pythoncom.CoUninitialize()
+            dict[key] += '\n'
     except wmi.x_access_denied:
         dict[key] = 'Access Denied'
     except wmi.x_wmi_authentication:
@@ -93,6 +97,7 @@ def monitor_wmi(key, dict, computer = '.', password='', user = ''):
     except Exception:
         dict[key] = 'Unknown error: ' + str(Exception.args)
     finally:
+        pythoncom.CoUninitialize()
         return 0
 
 def ram_wmi(key, dict, computer = '.', password='', user=''):
@@ -104,7 +109,7 @@ def ram_wmi(key, dict, computer = '.', password='', user=''):
             dict[key] += '\tName : ' + property.PartNumber + '\n'
             dict[key] += '\tCapacity : ' + property.Capacity + '\n'
             dict[key] += '\tSpeed : ' + str(property.Speed) + '\n'
-        pythoncom.CoUninitialize()
+            dict[key] += '\n'
         return 0
     except wmi.x_access_denied:
         dict[key] = 'Access Denied'

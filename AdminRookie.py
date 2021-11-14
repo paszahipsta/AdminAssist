@@ -9,6 +9,7 @@ import argparse
 import sys
 
 
+
 def clear():
     os.system('cls')
 
