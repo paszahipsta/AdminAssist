@@ -24,9 +24,7 @@ https://support.rapidfiretools.com/hc/en-us/articles/360007604558-Allowing-Remot
 
 Enable WMI in Domain:  
 
-From what I know domain Administrator have enough priviliges to query remote machines through WMI (if I'm wrong please let me know)
-
-Library requirements are available in requirements.txt .
+-
 
 ## Syntax 
 
